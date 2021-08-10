@@ -1,34 +1,26 @@
 {
-  "name": "bphcbns",
+  "name": "devconnector",
   "version": "1.0.0",
-  "description": "BPHC BUY AND SELL",
+  "description": "Social network for developers",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "start": "node backend/server",
-    "server": "nodemon backend/server",
-    "client": "npm start --prefix frontend",
-    "app": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "start": "node server",
+    "server": "nodemon server"
   },
-  "author": "Prathamesh Jadhav",
+  "author": "Arundhan Reddy",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "colors": "^1.4.0",
-    "dotenv": "^8.2.0",
+    "config": "^3.3.6",
     "express": "^4.17.1",
-    "express-async-handler": "^1.1.4",
+    "express-validator": "^6.12.0",
+    "gravatar": "^1.8.1",
     "jsonwebtoken": "^8.5.1",
-    "mongo-image-converter": "^1.0.2",
-    "mongoose": "^5.10.6",
-    "morgan": "^1.10.0",
-    "multer": "^1.4.2"
+    "mongoose": "^5.13.2",
+    "request": "^2.88.2"
   },
   "devDependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.4"
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.10"
   }
 }
